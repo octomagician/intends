@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Intends"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity3"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity2"
             android:exported="false" />
         <activity
@@ -20,7 +23,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 //esta linea es la que define que activity es el del inicio
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
