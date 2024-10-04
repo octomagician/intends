@@ -11,11 +11,9 @@ import androidx.core.view.WindowInsetsCompat;
 // importando lo que se ocupa
 import android.widget.Button;
 import android.view.View;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
-
-    //creando instancias de cada Intent
-    Intent activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +29,22 @@ public class MainActivity extends AppCompatActivity {
         });
         // ------------------------------------------------------------------------
 
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        // instancia del boton + asignación visual
+        Button botonUno = findViewById(R.id.button);
+        // invocando el metodo para sobreescribirlo
+        botonUno.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                System.out.println("¡Botón presionado!");
+
+                // instancia del intent, pasarle parámetro del activity
+                Intent intentactv = new Intent (MainActivity.this, MainActivity2.class);
+                // iniciar actividad
+                startActivity(intentactv);
             }
         });
+
+
+        // ---------------------------------------------------
 
     }
     }
